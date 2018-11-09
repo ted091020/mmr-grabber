@@ -14,6 +14,9 @@ def tesser_image(image):
 	image = PIL.Image.fromarray(image, "L")
 	image.save("test.jpg")
 	txt = pytesseract.image_to_string(image, config="--psm 6")
+
+	#txt = txt.replace(",", "")
+	#txt = txt.replace(" ", "")
 	return(txt)
 
 def screengrab_as_numpy_array(location):
@@ -30,3 +33,13 @@ while True:
 		mmr = tesser_image(screengrab_as_numpy_array((665, 722, 780, 755)))
 		print(mmr)
 		time.sleep(60)
+
+
+#test = numpy.array(PIL.Image.open("test.jpg"))
+
+
+
+#print(tesser_image(screengrab_as_numpy_array((618, 536, 722, 553))))
+
+
+
