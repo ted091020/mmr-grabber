@@ -1,2 +1,2 @@
-# mmr-grabber
-Grabs mmr from post-game screen and prints it out
+# MMR Grabber
+This code scans your screen every 30 seconds
